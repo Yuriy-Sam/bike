@@ -1,0 +1,511 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+
+body{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif ;
+  line-height: 1;
+  font-size: 15px;
+  color: #1c335c;
+
+
+
+}
+/*..........................................................................*/
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/*..........................................................................*/
+._container{
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+._ibg{
+  position: relative;
+  & img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+/*..........................................................................*/
+.header{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+.header__container{
+  min-height: 90px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+
+  .header__logo{
+    font-size: 19px;
+    font-weight: 700;
+    color: #1e203d;
+
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px #1cebe4;
+
+    &:hover{
+      color: #06bbc4;
+      transition: 0.5s;
+    }
+  }
+  .header__menu{
+
+  }
+  .menu{
+    padding: 5px 0px;
+
+  }
+  .menu__list{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+  }
+  .menu__item{
+    &:not(:last-child){
+      margin: 0px 20px 0px 0px;
+    }
+    // @media(any-hover: hover){
+    // }
+    &:hover{
+      .shop_list{
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(0px, 0px);
+      }
+
+    }
+  }
+  .menu__link{
+    line-height: calc(24/15*100%);
+    font-weight: 500;
+
+    color: #51595c;
+    &:hover {
+      padding: 5px 7px;
+      border-radius: 10px;
+      background-color: #51595c;
+      color: #fff;
+      transition: 0.4s;
+      font-weight: 700;
+
+      &._3{
+        border-radius:  10px 10px 0px 0px;
+
+      }
+
+
+    }
+
+
+
+
+
+
+  }
+
+  .shop_list{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    max-width: 100px;
+    background-color: #51595c;
+    line-height: calc(24/15*100%);
+    padding: 10px;
+    border-radius:  0px 10px 10px 10px;
+    pointer-events: none;
+    transform: translate(0px, 10px);
+
+
+    .shop_category{
+      color: #fff;
+      font-weight: 600;
+
+    }
+  }
+
+
+  .header__login{
+    font-size: 16px;
+    border: 2px solid #1e203d;
+    border-radius: 10px;
+    padding: 8px 15px;
+    color: #1e203d;
+    font-weight: 500;
+
+    &:hover{
+      box-shadow: 0px 0px 10px #06bbc4;
+      border: 2px solid #06bbc4;
+      transition: 1s;
+    }
+
+  }
+
+
+
+
+
+}
+
+
+
+
+/*..........................................................................*/
+.main-block{
+  position: relative;
+
+}
+
+
+
+
+
+
+
+
+.page__main-block{
+  height: 100%;
+  background-color: #f3f5f4;
+  box-shadow: 0px 0px 40px 10px white inset;
+
+  width: 100%;
+
+
+  .main-block__container{
+    position: relative;
+
+  }
+  .main-block__body{
+    padding: 220px 0px 180px 0px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .main-block__title{
+    line-height: 1.5;
+
+
+    font-size: 150px;
+    color: #20348a;
+    font-weight: 800;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 20px;
+    text-shadow: 7px 7px 4px #4b7afc;
+    text-transform: uppercase;
+
+  }
+  .main-block__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+
+}
+
+
+
+
+
+
+/*..........................................................................*/
+
+
+
+.page__company {
+  .company {
+    height: 100%;
+    background-color: #f3f5f4;
+    box-shadow: 0px 0px 40px 10px white inset;
+  
+    width: 100%;
+  
+  }
+  .company__container {
+    width: 100%;
+    height: 600px;
+  }
+  .company__body {
+  }
+  .company__title {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin: 80px 0 40px 0;
+    text-shadow: 3px 2px 2px #1cebe4;
+
+
+
+  }
+  .company__text {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+
+
+  }
+  .company__images {
+    margin: 50px 0 0 0;
+  }
+  .company__row {
+    display: flex;
+    justify-content: center;
+  }
+  .company__img2{
+    padding: 0 30px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+// ...team..........................................................
+
+
+
+.page__team {
+  .team {
+  }
+  .team__container {
+    width: 100%;
+    height: 600px;
+  }
+  .team__body {
+  }
+  .team__title {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin: 80px 0 60px 0;
+    text-shadow: 3px 2px 2px #1cebe4;
+
+  }
+
+  .team__row {
+    display: flex;
+    flex-direction: row;
+    // align-content: flex-start;
+    justify-content: space-between;
+    height: 200px;
+    // margin: 30px 10px;
+
+  }
+  .team__block {
+    width: 250px;
+    height: 400px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: 10px 10px;
+    padding: 20px;
+    border-radius: 25px;
+    border: 1px solid #20348a;
+    box-shadow: 5px 5px 0px 3px #20348a;
+    color: #20348a;
+
+    &:hover{
+      box-shadow: none;
+      transition: 0.5s;
+      background-color: #20348a;
+      color: #fff;
+
+    }
+
+    .team__picture {
+      margin: 15px 0;
+      height: 150px;
+      width: 150px;
+      border-radius: 100%;
+      box-shadow: 0 0 0 3px #20348a;
+      object-fit: cover;
+      
+      // border: 3px solid green;
+    }
+    .team__name {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .team__biografy {
+      font-size: 16px;
+      padding: 20px 0;
+
+      font-weight: 400;
+      text-align: left;
+
+
+    }
+  
+
+
+  }
+
+  
+
+
+}
+
+
+
+
+
+
+
+
+
+// ...footer..........................................................
+
+.footer{
+  height: 100%;
+  background-color: #e3e3e3;
+  box-shadow: 0px 0px 20px 10px white inset;
+
+  width: 100%;
+
+
+  .footer__container{}
+  .footer__body{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px ;
+
+  }
+  .footer__content{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e203d;
+    line-height: 30px;
+
+  }
+  .footer__logo{
+    font-size: 19px;
+    font-weight: 700;
+    color: #1e203d;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px #1cebe4;
+
+  }
+  .footer__email{}
+  .footer__phone{}
+  .footer__adress{}
+  .footer__list{
+    width: 225px;
+    // height: 100px;
+    // border: 2px solid #000;
+
+  }
+  .footer__item{
+
+  }
+  .footer__soc{
+    width: 60px;
+    // height: 60px;
+    // border: 2px solid #000;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 20%;
+    background-color: #51595c;
+
+    &:hover{
+      transition: 0.4s;
+      &._1{
+        background-color: #911010;
+      }
+      &._2{
+        background-color: #d45c0d;
+
+      }
+      &._3{
+        background-color: #d4bc0d;
+
+      }
+
+      &._4{
+        background-color: #72ad0c;
+
+      }
+
+      &._5{
+        background-color: #0dd4c3;
+
+      }
+
+      &._6{
+        background-color: #5e9dc4;
+
+      }
+
+      &._7{
+        background-color: #615ebf;
+
+      }
+      &._8{
+        background-color: #ac66cc;
+
+      }
+    }
+
+
+
+  }
+
+
+
+  .footer__map{
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+  }
+
+
+
+}
